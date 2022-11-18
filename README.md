@@ -19,8 +19,11 @@ Mockito.verify(dependency, Mockito.times(x)).someMockMethod();
 
 How do you verify the a mock has been called with specific arguments?
 
+if one arg:
+Mockito.verify(mock).someMockMethod(expectedArg);
 
+if multiple args:
+Mockito.verify(mock).someMockMethod(ArgumentMatchers.eq("VALUE_1"), ArgumentMatchers.argThat((x)->false));
 
 How do you use a predicate to verify the properties of the argument given to a call to the mock? 
-
 
