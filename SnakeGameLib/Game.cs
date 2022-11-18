@@ -113,12 +113,11 @@ namespace SnakeGameLib
                 Snake.Points += Speed * Snake.BodyPositions.Count;
                 //generate tentative food within bounds and not on snake
                 byte[] tentativeFoodPosition;
-                //confirm tentative food
+                //confirm tentative food position is not on snake
+                //generate new position if it is on snake
                 do tentativeFoodPosition = new byte[2] { (byte)applePositionGenerator.Next(1,MapX),
                                         (byte)applePositionGenerator.Next(1, MapY) };
-                while (tentativeFoodPosition[0] == Snake.BodyPositions.First()[0] &&
-                       tentativeFoodPosition[1] == Snake.BodyPositions.First()[1] &&
-                       Snake.Collide(tentativeFoodPosition));
+                while (Snake.Collide(tentativeFoodPosition, true));
                 //add new food
                 ApplePosition = tentativeFoodPosition;
                 pointDeductTimer.Restart();

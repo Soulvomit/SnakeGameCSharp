@@ -127,21 +127,21 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.Given("the game is running", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "direction"});
-                table5.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             string.Format("{0}", direction)});
 #line 8
- testRunner.When("the snake tries to turn", ((string)(null)), table5, "When ");
+ testRunner.When("the snake tries to turn", ((string)(null)), table8, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "direction",
                             "invalid"});
-                table6.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             string.Format("{0}", direction),
                             string.Format("{0}", invalid)});
 #line 11
- testRunner.Then("limit turn if it is invalid", ((string)(null)), table6, "Then ");
+ testRunner.Then("limit turn if it is invalid", ((string)(null)), table9, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

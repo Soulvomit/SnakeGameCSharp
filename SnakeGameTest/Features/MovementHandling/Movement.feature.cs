@@ -123,12 +123,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.When("an update cycle has happened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "direction"});
-                table7.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             string.Format("{0}", direction)});
 #line 7
- testRunner.Then("snake head should move one position in the current direction", ((string)(null)), table7, "Then ");
+ testRunner.Then("snake head should move one position in the current direction", ((string)(null)), table10, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

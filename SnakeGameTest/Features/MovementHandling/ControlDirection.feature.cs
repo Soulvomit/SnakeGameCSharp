@@ -120,19 +120,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  testRunner.Given("the game is running", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "direction"});
-                table3.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             string.Format("{0}", direction)});
 #line 6
- testRunner.When("a new direction is detected", ((string)(null)), table3, "When ");
+ testRunner.When("a new direction is detected", ((string)(null)), table6, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "direction"});
-                table4.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             string.Format("{0}", direction)});
 #line 9
- testRunner.Then("update the direction of snake to the new direction", ((string)(null)), table4, "Then ");
+ testRunner.Then("update the direction of snake to the new direction", ((string)(null)), table7, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

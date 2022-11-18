@@ -91,13 +91,11 @@ namespace SnakeGameTest.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrow")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
-        public virtual void SnakeGrow()
+        public virtual void SnakeGrow(string offset_Position, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("offset_position", offset_Position);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SnakeGrow", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
@@ -122,10 +120,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("there is an apple on the game field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "offset_position"});
+                table3.AddRow(new string[] {
+                            string.Format("{0}", offset_Position)});
 #line 7
- testRunner.When("the snake eats an apple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the snake eats an apple", ((string)(null)), table3, "When ");
 #line hidden
-#line 8
+#line 10
  testRunner.Then("the snake should grow one size larger", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -133,14 +135,60 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrowPosition")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrow: UP")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
-        public virtual void SnakeGrowPosition()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "UP")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "UP")]
+        public virtual void SnakeGrow_UP()
         {
-            string[] tagsOfScenario = ((string[])(null));
+#line 5
+this.SnakeGrow("UP", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrow: DOWN")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "DOWN")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "DOWN")]
+        public virtual void SnakeGrow_DOWN()
+        {
+#line 5
+this.SnakeGrow("DOWN", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrow: LEFT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "LEFT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "LEFT")]
+        public virtual void SnakeGrow_LEFT()
+        {
+#line 5
+this.SnakeGrow("LEFT", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrow: RIGHT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "RIGHT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "RIGHT")]
+        public virtual void SnakeGrow_RIGHT()
+        {
+#line 5
+this.SnakeGrow("RIGHT", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void SnakeGrowPosition(string offset_Position, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("offset_position", offset_Position);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("SnakeGrowPosition", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 10
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -160,17 +208,73 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 11
+#line 19
  testRunner.Given("there is an apple on the game field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
- testRunner.When("the snake eats an apple", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "offset_position"});
+                table4.AddRow(new string[] {
+                            string.Format("{0}", offset_Position)});
+#line 20
+ testRunner.When("the snake eats an apple", ((string)(null)), table4, "When ");
 #line hidden
-#line 13
- testRunner.Then("the snake should grow at apple offest position", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "offset_position"});
+                table5.AddRow(new string[] {
+                            string.Format("{0}", offset_Position)});
+#line 23
+ testRunner.Then("the snake should grow at apple offset position", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrowPosition: UP")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "UP")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "UP")]
+        public virtual void SnakeGrowPosition_UP()
+        {
+#line 18
+this.SnakeGrowPosition("UP", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrowPosition: DOWN")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "DOWN")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "DOWN")]
+        public virtual void SnakeGrowPosition_DOWN()
+        {
+#line 18
+this.SnakeGrowPosition("DOWN", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrowPosition: LEFT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "LEFT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "LEFT")]
+        public virtual void SnakeGrowPosition_LEFT()
+        {
+#line 18
+this.SnakeGrowPosition("LEFT", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("SnakeGrowPosition: RIGHT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Grow")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "RIGHT")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:offset_position", "RIGHT")]
+        public virtual void SnakeGrowPosition_RIGHT()
+        {
+#line 18
+this.SnakeGrowPosition("RIGHT", ((string[])(null)));
+#line hidden
         }
     }
 }
